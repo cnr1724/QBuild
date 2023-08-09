@@ -1,0 +1,63 @@
+Create table tblBOM
+(
+ParentName varchar(50),
+Quantity int,
+ComponentName varchar(50)
+
+);
+
+Create table tblParts
+(
+Name varchar(50),
+Type varchar(10),
+Item varchar(10),
+PartNumber varchar(40),
+Title varchar(100),
+Material varchar(50)
+);
+
+
+BULK INSERT tblBOM
+FROM 'E:\QB\bom.csv'
+WITH
+(
+	FIELDTERMINATOR = ',',
+	ROWTERMINATOR = '\n',
+	FIRSTROW = 2
+);
+
+Select * from tblBOM;
+
+BULK INSERT tblParts
+FROM 'E:\QB\part.txt'
+WITH
+(
+	FIELDTERMINATOR = '\t',
+	ROWTERMINATOR = '\n',
+	FIRSTROW = 2
+);
+
+Select * from tblParts order by Name;
+
+-- Query to get the root record
+SELECT ComponentName FROM tblBOM where ParentName is null;
+
+select ComponentName,ParentName 
+from tblBOM where componentName in (
+Select distinct ParentName 
+from tblBOM );
+
+
+
+select ComponentName,ParentName,
+(case 
+    when ParentName is NULL THEN 'ROOT'
+	when ParentName = (Select distinct ComponentName 
+from tblBOM where ParentName IS NULL) THEN 'ASSEMBLY'
+	ELSE 'SUBASSEMBLY'
+END) Type
+from tblBOM where componentName in (
+Select distinct ParentName 
+from tblBOM);
+
+
