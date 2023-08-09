@@ -1,0 +1,11 @@
+C:\Users\navee\source\repos\Qbuild\Qbuild\bin\Debug\Qbuild.exe.config
+C:\Users\navee\source\repos\Qbuild\Qbuild\bin\Debug\Qbuild.exe
+C:\Users\navee\source\repos\Qbuild\Qbuild\bin\Debug\Qbuild.pdb
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.csproj.AssemblyReference.cache
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.csproj.SuggestedBindingRedirects.cache
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.Properties.Resources.resources
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.csproj.GenerateResource.cache
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.csproj.CoreCompileInputs.cache
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.exe
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.pdb
+C:\Users\navee\source\repos\Qbuild\Qbuild\obj\Debug\Qbuild.Form2.resources
